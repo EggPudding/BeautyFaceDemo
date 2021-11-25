@@ -14,6 +14,15 @@ function App() {
         setPreviewURL(reader.result);
       };
       reader.readAsDataURL(image);
+    } else {
+      setPreviewURL(null);
+      setResultURL(null);
+    }
+  }, [image]);
+
+  useEffect(() => {
+    if (previewURL) {
+      console.log(previewURL);
 
       const post = {
         data: previewURL
@@ -35,11 +44,8 @@ function App() {
         .then((res) => {
           setResultURL(`data:image/png;base64,${res.data}`);
         });
-    } else {
-      setPreviewURL(null);
-      setResultURL(null);
     }
-  }, [image]);
+  }, [previewURL]);
 
   return (
     <div className="App">
