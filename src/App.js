@@ -45,13 +45,18 @@ function App() {
         .then((res) => res.json())
         .then((res) => {
           setResultURL(`data:image/png;base64,${res.data}`);
+          setIsLoading(true);
         });
     }
   }, [previewURL]);
 
   return (
     <div className="App">
-      <img src={sample} aria-hidden alt="asset/sample.jpeg Image" />
+      {/* <img src={sample} aria-hidden alt="asset/sample.jpeg Image" /> */}
+      <div>
+        <img src={previewURL} alt="profile" height="300" />
+        <img src={resultURL} alt="result" height="300" />
+      </div>
       <header className="Text">
         <h1>BeautyFace Demo</h1>
         <h2>Guideline..</h2>
@@ -76,10 +81,6 @@ function App() {
       <header className="Text">
         <p>{previewURL}</p>
       </header>
-      <div>
-        <img src={previewURL} alt="profile" height="300" />
-        <img src={resultURL} alt="result" height="300" />
-      </div>
     </div>
   );
 }
