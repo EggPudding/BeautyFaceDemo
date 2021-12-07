@@ -75,8 +75,8 @@ function App() {
         <p>{previewURL}</p>
       </header>
       <div>
-        <img src={previewURL} alt="profile" />
-        <img src={resultURL} alt="result" />
+        <img src={previewURL} alt="profile" height="300" />
+        <img src={resultURL} alt="result" height="300" />
       </div>
     </div>
   );
