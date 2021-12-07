@@ -1,11 +1,12 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
-import sample from './asset/sample.jpeg';
+import placeHolder from './asset/sample.jpeg';
 
 function App() {
   const [image, setImage] = useState();
   const [previewURL, setPreviewURL] = useState('');
   const [resultURL, setResultURL] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   // Image change handler
   useEffect(() => {
@@ -51,31 +52,53 @@ function App() {
   }, [previewURL]);
 
   return (
-    <div className="App">
-      {/* <img src={sample} aria-hidden alt="asset/sample.jpeg Image" /> */}
-      <div>
-        <img src={previewURL} alt="profile" height="300" />
-        <img src={resultURL} alt="result" height="300" />
-      </div>
-      <header className="Text">
+    <div className="App" style={{ 'margin-top': 40 }}>
+      <header className="App-logo">
         <h1>BeautyFace Demo</h1>
         <h2>Guideline..</h2>
         {'<'} Load your image {'>'}
       </header>
+      <div style={{ 'margin-top': 60, 'margin-bottom': 60 }}>
+        <label className="input-file-button" htmlFor="input-file">
+          Upload
+          <input
+            id="input-file"
+            style={{ display: 'none' }}
+            type="file"
+            accept="image/jpg,impge/png,image/jpeg"
+            name="profile_img"
+            onChange={(e) => {
+              // e.preventDefault();
+              const file = e.target.files[0];
+              if (file) {
+                setImage(file);
+              } else {
+                setImage(null);
+              }
+            }}
+          />
+        </label>
+      </div>
       <div>
-        <input
-          type="file"
-          accept="image/jpg,impge/png,image/jpeg,image/gif"
-          name="profile_img"
-          onChange={(e) => {
-            // e.preventDefault();
-            const file = e.target.files[0];
-            if (file) {
-              setImage(file);
-            } else {
-              setImage(null);
-            }
-          }}
+        <img
+          src={placeHolder} // Placeholder before loading image
+          aria-hidden
+          alt="profile"
+          height="300"
+          style={{ display: isLoading ? 'none' : 'inline' }}
+        />
+        <img
+          src={previewURL}
+          aria-hidden
+          alt="profile"
+          height="300"
+          style={{ display: isLoading ? 'inline' : 'none' }}
+        />
+        <img
+          src={resultURL}
+          alt="result"
+          height="300"
+          style={{ display: isLoading ? 'inline' : 'none' }}
         />
       </div>
       <header className="Text">
