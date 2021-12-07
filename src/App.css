@@ -32,3 +32,11 @@
   color: white;
   cursor: pointer;
 }
+
+.input-file-button:hover {
+  padding: 6px 25px;
+  background-color: #363434;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
