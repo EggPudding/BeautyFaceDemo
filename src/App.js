@@ -7,6 +7,7 @@ function App() {
   const [previewURL, setPreviewURL] = useState('');
   const [resultURL, setResultURL] = useState('');
 
+  // Image change handler
   useEffect(() => {
     const reader = new FileReader();
     if (image) {
@@ -20,6 +21,7 @@ function App() {
     }
   }, [image]);
 
+  // previewURL change handler
   useEffect(() => {
     if (previewURL) {
       console.log(previewURL);
