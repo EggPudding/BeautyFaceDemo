@@ -55,8 +55,12 @@ function App() {
     <div className="App" style={{ 'margin-top': 40 }}>
       <header className="App-logo">
         <h1>BeautyFace Demo</h1>
-        <h2>Guideline..</h2>
-        {'<'} Load your image {'>'}
+        <h2>Enhance photo with AI model</h2>
+        <h3>
+          Upload your own image and
+          <br />
+          Check the result!
+        </h3>
       </header>
       <div style={{ 'margin-top': 60, 'margin-bottom': 60 }}>
         <label className="input-file-button" htmlFor="input-file">
@@ -101,9 +105,6 @@ function App() {
           style={{ display: isLoading ? 'inline' : 'none' }}
         />
       </div>
-      <header className="Text">
-        <p>{previewURL}</p>
-      </header>
     </div>
   );
 }
