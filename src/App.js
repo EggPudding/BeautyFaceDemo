@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
-import placeHolder from './asset/sample.jpeg';
+import placeHolder from './asset/pngegg.png';
 
 function App() {
   const [image, setImage] = useState();
