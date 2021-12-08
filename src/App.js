@@ -52,7 +52,7 @@ function App() {
   }, [previewURL]);
 
   return (
-    <div className="App" style={{ 'margin-top': 40 }}>
+    <div className="App" style={{ 'margin-top': 20 }}>
       <header className="App-logo">
         <h1>BeautyFace Demo</h1>
         <h2>Enhance photo with AI model</h2>
@@ -62,7 +62,7 @@ function App() {
           Check the result!
         </h3>
       </header>
-      <div style={{ 'margin-top': 60, 'margin-bottom': 60 }}>
+      <div style={{ 'margin-top': 60, 'margin-bottom': 40 }}>
         <label className="input-file-button" htmlFor="input-file">
           Upload
           <input
