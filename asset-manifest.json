@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/EggPudding/BeautyFace/static/css/main.0f08eb3b.chunk.css",
+    "main.js": "/EggPudding/BeautyFace/static/js/main.58246143.chunk.js",
+    "main.js.map": "/EggPudding/BeautyFace/static/js/main.58246143.chunk.js.map",
+    "runtime-main.js": "/EggPudding/BeautyFace/static/js/runtime-main.c9ad32df.js",
+    "runtime-main.js.map": "/EggPudding/BeautyFace/static/js/runtime-main.c9ad32df.js.map",
+    "static/js/2.031b91f6.chunk.js": "/EggPudding/BeautyFace/static/js/2.031b91f6.chunk.js",
+    "static/js/2.031b91f6.chunk.js.map": "/EggPudding/BeautyFace/static/js/2.031b91f6.chunk.js.map",
+    "static/js/3.9766f148.chunk.js": "/EggPudding/BeautyFace/static/js/3.9766f148.chunk.js",
+    "static/js/3.9766f148.chunk.js.map": "/EggPudding/BeautyFace/static/js/3.9766f148.chunk.js.map",
+    "index.html": "/EggPudding/BeautyFace/index.html",
+    "static/css/main.0f08eb3b.chunk.css.map": "/EggPudding/BeautyFace/static/css/main.0f08eb3b.chunk.css.map",
+    "static/js/2.031b91f6.chunk.js.LICENSE.txt": "/EggPudding/BeautyFace/static/js/2.031b91f6.chunk.js.LICENSE.txt",
+    "static/media/pngegg.699fb6d5.png": "/EggPudding/BeautyFace/static/media/pngegg.699fb6d5.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c9ad32df.js",
+    "static/js/2.031b91f6.chunk.js",
+    "static/css/main.0f08eb3b.chunk.css",
+    "static/js/main.58246143.chunk.js"
+  ]
+}
