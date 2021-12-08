@@ -91,19 +91,26 @@ function App() {
           height="300"
           style={{ display: isLoading ? 'none' : 'inline' }}
         />
-        <img
-          src={previewURL}
-          aria-hidden
-          alt="profile"
-          height="300"
-          style={{ display: isLoading ? 'inline' : 'none' }}
-        />
-        <img
-          src={resultURL}
-          alt="result"
-          height="300"
-          style={{ display: isLoading ? 'inline' : 'none' }}
-        />
+        <figure
+          style={{
+            display: isLoading ? 'inline-block' : 'none',
+            float: 'left',
+            marginLeft: 150,
+          }}
+        >
+          <img src={previewURL} aria-hidden alt="profile" height="300" />
+          <figcaption>Original Image</figcaption>
+        </figure>
+        <figure
+          style={{
+            display: isLoading ? 'inline-block' : 'none',
+            float: 'right',
+            marginRight: 150,
+          }}
+        >
+          <img src={resultURL} alt="result" height="300" />
+          <figcaption>Enhanced Image</figcaption>
+        </figure>
       </div>
     </div>
   );
