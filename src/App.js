@@ -59,7 +59,7 @@ function App() {
   }, [previewURL]);
 
   return (
-    <div style={{ 'text-align': 'center' }}>
+    <div style={{ 'text-align': 'center', 'margin-top': '5vh' }}>
       <header height="20vmin">
         <h1>BeautyFace Demo v.1</h1>
         <h2>Enhance photo with AI model</h2>
