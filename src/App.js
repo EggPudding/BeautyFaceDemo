@@ -88,7 +88,7 @@ function App() {
           />
         </label>
       </div>
-      <Flex justifyCenter>
+      <div>
         {/* Placeholder */}
         <img
           src={placeHolder}
@@ -103,8 +103,15 @@ function App() {
             display: isPreviewLoading ? 'inline-block' : 'none',
           }}
         >
-          <img src={previewURL} alt="profile" width="50%" />
-          <figcaption>Original Image</figcaption>
+          <img src={previewURL} alt="profile" height="300vh" />
+          <figcaption
+            style={{
+              textAlign: 'center',
+              fontSize: 'large',
+            }}
+          >
+            Original Image
+          </figcaption>
         </figure>
 
         {/* Result Image */}
@@ -113,10 +120,17 @@ function App() {
             display: isResultLoading ? 'inline-block' : 'none',
           }}
         >
-          <img src={resultURL} alt="result" width="50%" />
-          <figcaption>Enhanced Image</figcaption>
+          <img src={resultURL} alt="result" height="300vh" />
+          <figcaption
+            style={{
+              textAlign: 'center',
+              fontSize: 'large',
+            }}
+          >
+            Enhanced Image
+          </figcaption>
         </figure>
-      </Flex>
+      </div>
     </div>
   );
 }
