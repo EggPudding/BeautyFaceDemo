@@ -6,7 +6,8 @@ function App() {
   const [image, setImage] = useState();
   const [previewURL, setPreviewURL] = useState('');
   const [resultURL, setResultURL] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  const [isPreviewLoading, setIsPreviewLoading] = useState(false);
+  const [isResultLoading, SetIsResultLoading] = useState(false);
 
   // Image change handler
   useEffect(() => {
@@ -26,6 +27,8 @@ function App() {
   useEffect(() => {
     if (previewURL) {
       console.log(previewURL);
+
+      setIsPreviewLoading(true);
 
       const post = {
         data: previewURL
@@ -89,11 +92,11 @@ function App() {
           aria-hidden
           alt="profile"
           height="300"
-          style={{ display: isLoading ? 'none' : 'inline' }}
+          style={{ display: isPreviewLoading ? 'none' : 'inline' }}
         />
         <figure
           style={{
-            display: isLoading ? 'inline-block' : 'none',
+            display: isPreviewLoading ? 'inline-block' : 'none',
             float: 'left',
             marginLeft: 150,
           }}
@@ -103,7 +106,7 @@ function App() {
         </figure>
         <figure
           style={{
-            display: isLoading ? 'inline-block' : 'none',
+            display: isResultLoading ? 'inline-block' : 'none',
             float: 'right',
             marginRight: 150,
           }}
