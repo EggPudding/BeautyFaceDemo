@@ -20,8 +20,8 @@ function App() {
       };
       reader.readAsDataURL(image);
     } else {
-      setPreviewURL(null);
-      setResultURL(null);
+      // setPreviewURL(null);
+      // setResultURL(null);
     }
   }, [image]);
 
