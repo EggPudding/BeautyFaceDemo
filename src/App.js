@@ -132,6 +132,31 @@ function App() {
             Enhanced Image
           </figcaption>
         </figure>
+
+        {/* <Box
+          // alignItems="center"
+          // justifyContent="center"
+          component="div"
+          sx={{
+            mt: '10vh',
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: '1px dashed grey',
+            width: '50%',
+          }}
+        >
+          <Slider
+            // alignItems="center"
+            // justifyContent="center"
+            aria-label="eye"
+            defaultValue={0}
+            valueLabelDisplay="off"
+            step={5}
+            min={-30}
+            max={30}
+            color="secondary"
+          />
+        </Box> */}
       </div>
       <div>
         {/* <Stack spacing={1} direction="column" alignItems="center">
@@ -156,7 +181,7 @@ function App() {
             color="secondary"
           />
         </Stack> */}
-        <Box component="span" sx={{ p: 2, border: '1px dashed grey' }}>
+        {/* <Box component="span" sx={{ p: 2, border: '1px dashed grey' }}>
           <Slider
             aria-label="eye"
             defaultValue={0}
@@ -166,7 +191,7 @@ function App() {
             max={30}
             color="secondary"
           />
-        </Box>
+        </Box> */}
       </div>
     </div>
   );
