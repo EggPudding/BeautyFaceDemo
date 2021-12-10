@@ -1,20 +1,21 @@
-.App {
+/* .App {
   text-align: center;
-}
+  margin-top: 100;
+} */
 
-.Text {
+/* .App-logo {
+  height: 20vmin;
+  pointer-events: none;
+} */
+
+/* .Text {
   font-family: monospace;
   font-weight: bold;
   color: #fff;
   background-color: gray;
-}
+} */
 
-.App-logo {
-  height: 20vmin;
-  pointer-events: none;
-}
-
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -23,7 +24,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .input-file-button {
   padding: 6px 25px;

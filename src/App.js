@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
+import Flex from '@react-css/flex';
 import placeHolder from './asset/pngegg.png';
 
 function App() {
@@ -37,7 +38,8 @@ function App() {
       };
 
       fetch(
-        'https://us-central1-absolute-hook-325400.cloudfunctions.net/inference',
+        // 'https://us-central1-absolute-hook-325400.cloudfunctions.net/inference',
+        'http://192.168.0.81:8080/',
         {
           method: 'POST',
           headers: {
@@ -49,15 +51,15 @@ function App() {
         .then((res) => res.json())
         .then((res) => {
           setResultURL(`data:image/png;base64,${res.data}`);
-          setIsLoading(true);
+          SetIsResultLoading(true);
         });
     }
   }, [previewURL]);
 
   return (
-    <div className="App" style={{ 'margin-top': 20 }}>
-      <header className="App-logo">
-        <h1>BeautyFace Demo</h1>
+    <div style={{ 'text-align': 'center' }}>
+      <header height="20vmin">
+        <h1>BeautyFace Demo v.1</h1>
         <h2>Enhance photo with AI model</h2>
         <h3>
           Upload your own image and
@@ -65,7 +67,7 @@ function App() {
           Check the result!
         </h3>
       </header>
-      <div style={{ 'margin-top': 60, 'margin-bottom': 40 }}>
+      <div style={{ 'margin-top': '5vh', 'margin-bottom': '10vh' }}>
         <label className="input-file-button" htmlFor="input-file">
           Upload
           <input
@@ -86,35 +88,35 @@ function App() {
           />
         </label>
       </div>
-      <div>
+      <Flex justifyCenter>
+        {/* Placeholder */}
         <img
-          src={placeHolder} // Placeholder before loading image
-          aria-hidden
+          src={placeHolder}
           alt="profile"
-          height="300"
+          height="300vh"
           style={{ display: isPreviewLoading ? 'none' : 'inline' }}
         />
+
+        {/* Preview Image */}
         <figure
           style={{
             display: isPreviewLoading ? 'inline-block' : 'none',
-            float: 'left',
-            marginLeft: 150,
           }}
         >
-          <img src={previewURL} aria-hidden alt="profile" height="300" />
+          <img src={previewURL} alt="profile" width="50%" />
           <figcaption>Original Image</figcaption>
         </figure>
+
+        {/* Result Image */}
         <figure
           style={{
             display: isResultLoading ? 'inline-block' : 'none',
-            float: 'right',
-            marginRight: 150,
           }}
         >
-          <img src={resultURL} alt="result" height="300" />
+          <img src={resultURL} alt="result" width="50%" />
           <figcaption>Enhanced Image</figcaption>
         </figure>
-      </div>
+      </Flex>
     </div>
   );
 }
