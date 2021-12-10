@@ -1,6 +1,8 @@
 import './App.css';
 import React, { useEffect, useState } from 'react';
-import Flex from '@react-css/flex';
+import Slider from '@mui/material/Slider';
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
 import placeHolder from './asset/pngegg.png';
 
 function App() {
@@ -19,8 +21,8 @@ function App() {
       };
       reader.readAsDataURL(image);
     } else {
-      setPreviewURL(null);
-      setResultURL(null);
+      // setPreviewURL(null);
+      // setResultURL(null);
     }
   }, [image]);
 
@@ -130,6 +132,41 @@ function App() {
             Enhanced Image
           </figcaption>
         </figure>
+      </div>
+      <div>
+        {/* <Stack spacing={1} direction="column" alignItems="center">
+          <h3>Result</h3>
+          <Slider
+            aria-label="lib"
+            defaultValue={0}
+            valueLabelDisplay="off"
+            step={5}
+            min={-30}
+            max={30}
+            color="primary"
+          />
+          <h3>Result</h3>
+          <Slider
+            aria-label="eye"
+            defaultValue={0}
+            valueLabelDisplay="off"
+            step={5}
+            min={-30}
+            max={30}
+            color="secondary"
+          />
+        </Stack> */}
+        <Box component="span" sx={{ p: 2, border: '1px dashed grey' }}>
+          <Slider
+            aria-label="eye"
+            defaultValue={0}
+            valueLabelDisplay="off"
+            step={5}
+            min={-30}
+            max={30}
+            color="secondary"
+          />
+        </Box>
       </div>
     </div>
   );
