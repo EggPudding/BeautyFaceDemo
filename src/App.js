@@ -12,7 +12,7 @@ function App() {
   const [previewURL, setPreviewURL] = useState('');
   const [resultURL, setResultURL] = useState('');
   const [isPreviewLoading, setIsPreviewLoading] = useState(false);
-  const [isResultLoading, SetIsResultLoading] = useState(false);
+  const [isResultLoading, setIsResultLoading] = useState(false);
 
   // Image change handler
   useEffect(() => {
@@ -56,7 +56,7 @@ function App() {
         .then((res) => res.json())
         .then((res) => {
           setResultURL(`data:image/png;base64,${res.data}`);
-          SetIsResultLoading(true);
+          setIsResultLoading(true);
         });
     }
   }, [previewURL]);
