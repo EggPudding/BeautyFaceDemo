@@ -67,6 +67,7 @@ function App() {
         'margin-bottom': '15vh',
       }}
     >
+      {/* 1. Header */}
       <header height="20vmin">
         <h1>BeautyFace Demo v.1</h1>
         <h2>Enhance photo with AI model</h2>
@@ -76,6 +77,8 @@ function App() {
           Check the result!
         </h3>
       </header>
+
+      {/* 2. Upload Button */}
       <div style={{ 'margin-top': '5vh', 'margin-bottom': '10vh' }}>
         <label className="input-file-button" htmlFor="input-file">
           Upload
@@ -97,8 +100,10 @@ function App() {
           />
         </label>
       </div>
+
+      {/* 3. Image */}
       <div>
-        {/* Placeholder */}
+        {/* 3.1. Placeholder */}
         <img
           src={placeHolder}
           alt="profile"
@@ -106,7 +111,7 @@ function App() {
           style={{ display: isPreviewLoading ? 'none' : 'inline' }}
         />
 
-        {/* Preview Image */}
+        {/* 3.2. Preview Image */}
         <figure
           style={{
             display: isPreviewLoading ? 'inline-block' : 'none',
@@ -123,7 +128,7 @@ function App() {
           </figcaption>
         </figure>
 
-        {/* Result Image */}
+        {/* 3.3. Result Image */}
         <figure
           style={{
             display: isResultLoading ? 'inline-block' : 'none',
@@ -140,7 +145,10 @@ function App() {
           </figcaption>
         </figure>
       </div>
+
+      {/* 4. Slider */}
       <div>
+        {/* 4.1 Lib Color Slider */}
         <h3>enhance lib color</h3>
         <Grid container spacing={1} direction="row">
           <Grid item xs={3} />
@@ -183,6 +191,7 @@ function App() {
           </Grid>
           <Grid item xs={3} />
         </Grid>
+        {/* 4.1 Lib Color Slider */}
         <h3>enhance eye color</h3>
         <Grid container spacing={1} direction="row">
           <Grid item xs={3} />
