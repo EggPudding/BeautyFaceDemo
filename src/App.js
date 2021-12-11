@@ -60,7 +60,13 @@ function App() {
   }, [previewURL]);
 
   return (
-    <div style={{ 'text-align': 'center', 'margin-top': '5vh' }}>
+    <div
+      style={{
+        'text-align': 'center',
+        'margin-top': '5vh',
+        'margin-bottom': '15vh',
+      }}
+    >
       <header height="20vmin">
         <h1>BeautyFace Demo v.1</h1>
         <h2>Enhance photo with AI model</h2>
@@ -133,66 +139,92 @@ function App() {
             Enhanced Image
           </figcaption>
         </figure>
-
-        {/* <Box
-          // alignItems="center"
-          // justifyContent="center"
-          component="div"
-          sx={{
-            mt: '10vh',
-            alignItems: 'center',
-            justifyContent: 'center',
-            border: '1px dashed grey',
-            width: '50%',
-          }}
-        >
-          <Slider
-            // alignItems="center"
-            // justifyContent="center"
-            aria-label="eye"
-            defaultValue={0}
-            valueLabelDisplay="off"
-            step={5}
-            min={-30}
-            max={30}
-            color="secondary"
-          />
-        </Box> */}
       </div>
       <div>
-        {/* <Stack spacing={1} direction="column" alignItems="center">
-          <h3>Result</h3>
-          <Slider
-            aria-label="lib"
-            defaultValue={0}
-            valueLabelDisplay="off"
-            step={5}
-            min={-30}
-            max={30}
-            color="primary"
-          />
-          <h3>Result</h3>
-          <Slider
-            aria-label="eye"
-            defaultValue={0}
-            valueLabelDisplay="off"
-            step={5}
-            min={-30}
-            max={30}
-            color="secondary"
-          />
-        </Stack> */}
-        {/* <Box component="span" sx={{ p: 2, border: '1px dashed grey' }}>
-          <Slider
-            aria-label="eye"
-            defaultValue={0}
-            valueLabelDisplay="off"
-            step={5}
-            min={-30}
-            max={30}
-            color="secondary"
-          />
-        </Box> */}
+        <h3>enhance lib color</h3>
+        <Grid container spacing={1} direction="row">
+          <Grid item xs={3} />
+          <Grid item xs={6}>
+            <Slider
+              aria-label="lib_r"
+              defaultValue={0}
+              valueLabelDisplay="off"
+              step={5}
+              min={-30}
+              max={30}
+              color="error"
+            />
+          </Grid>
+          <Grid item xs={3} />
+          <Grid item xs={3} />
+          <Grid item xs={6}>
+            <Slider
+              aria-label="lib_g"
+              defaultValue={0}
+              valueLabelDisplay="off"
+              step={5}
+              min={-30}
+              max={30}
+              color="success"
+            />
+          </Grid>
+          <Grid item xs={3} />
+          <Grid item xs={3} />
+          <Grid item xs={6}>
+            <Slider
+              aria-label="lib_b"
+              defaultValue={0}
+              valueLabelDisplay="off"
+              step={5}
+              min={-30}
+              max={30}
+              color="primary"
+            />
+          </Grid>
+          <Grid item xs={3} />
+        </Grid>
+        <h3>enhance eye color</h3>
+        <Grid container spacing={1} direction="row">
+          <Grid item xs={3} />
+          <Grid item xs={6}>
+            <Slider
+              aria-label="eye_r"
+              defaultValue={0}
+              valueLabelDisplay="off"
+              step={5}
+              min={-30}
+              max={30}
+              color="error"
+            />
+          </Grid>
+          <Grid item xs={3} />
+          <Grid item xs={3} />
+          <Grid item xs={6}>
+            <Slider
+              aria-label="eye_g"
+              defaultValue={0}
+              valueLabelDisplay="off"
+              step={5}
+              min={-30}
+              max={30}
+              color="success"
+            />
+          </Grid>
+          <Grid item xs={3} />
+          <Grid item xs={3} />
+          <Grid item xs={6}>
+            <Slider
+              aria-label="eye_b"
+              defaultValue={0}
+              valueLabelDisplay="off"
+              step={5}
+              min={-30}
+              max={30}
+              color="primary"
+            />
+          </Grid>
+          <Grid item xs={3} />
+        </Grid>
       </div>
     </div>
   );
