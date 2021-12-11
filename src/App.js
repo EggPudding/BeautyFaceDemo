@@ -37,6 +37,7 @@ function App() {
         data: previewURL
           .toString()
           .replace(/^data:image\/(png|jpg|jpeg);base64,/, ''),
+        type: 'inference',
       };
 
       fetch(
