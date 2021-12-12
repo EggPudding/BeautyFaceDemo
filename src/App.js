@@ -248,7 +248,7 @@ function App() {
           <Grid item xs={3} />
         </Grid>
         {/* 4.1 Lib Color Slider */}
-        <h3>enhance eye color</h3>
+        {/* <h3>enhance eye color</h3>
         <Grid container spacing={1} direction="row">
           <Grid item xs={3} />
           <Grid item xs={6}>
@@ -289,7 +289,7 @@ function App() {
             />
           </Grid>
           <Grid item xs={3} />
-        </Grid>
+        </Grid> */}
       </div>
     </div>
   );
