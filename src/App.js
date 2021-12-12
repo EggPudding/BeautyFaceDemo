@@ -194,7 +194,12 @@ function App() {
       <div>
         {/* 4.1 Lib Color Slider */}
         <h3>enhance lib color</h3>
-        <Grid container spacing={1} direction="row">
+        <Grid
+          container
+          spacing={1}
+          direction="row"
+          style={{ display: isResultLoading ? 'flex' : 'none' }}
+        >
           <Grid item xs={3} />
           <Grid item xs={6}>
             <Slider
