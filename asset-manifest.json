@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/BeautyFaceDemo/static/css/main.0f08eb3b.chunk.css",
-    "main.js": "/BeautyFaceDemo/static/js/main.0febb163.chunk.js",
-    "main.js.map": "/BeautyFaceDemo/static/js/main.0febb163.chunk.js.map",
-    "runtime-main.js": "/BeautyFaceDemo/static/js/runtime-main.cff454d8.js",
-    "runtime-main.js.map": "/BeautyFaceDemo/static/js/runtime-main.cff454d8.js.map",
-    "static/js/2.031b91f6.chunk.js": "/BeautyFaceDemo/static/js/2.031b91f6.chunk.js",
-    "static/js/2.031b91f6.chunk.js.map": "/BeautyFaceDemo/static/js/2.031b91f6.chunk.js.map",
-    "static/js/3.9766f148.chunk.js": "/BeautyFaceDemo/static/js/3.9766f148.chunk.js",
-    "static/js/3.9766f148.chunk.js.map": "/BeautyFaceDemo/static/js/3.9766f148.chunk.js.map",
+    "main.css": "/BeautyFaceDemo/static/css/main.8d34c6bf.chunk.css",
+    "main.js": "/BeautyFaceDemo/static/js/main.562310ce.chunk.js",
+    "main.js.map": "/BeautyFaceDemo/static/js/main.562310ce.chunk.js.map",
+    "runtime-main.js": "/BeautyFaceDemo/static/js/runtime-main.0a588cd1.js",
+    "runtime-main.js.map": "/BeautyFaceDemo/static/js/runtime-main.0a588cd1.js.map",
+    "static/js/2.250ed8b4.chunk.js": "/BeautyFaceDemo/static/js/2.250ed8b4.chunk.js",
+    "static/js/2.250ed8b4.chunk.js.map": "/BeautyFaceDemo/static/js/2.250ed8b4.chunk.js.map",
+    "static/js/3.d96aaa3f.chunk.js": "/BeautyFaceDemo/static/js/3.d96aaa3f.chunk.js",
+    "static/js/3.d96aaa3f.chunk.js.map": "/BeautyFaceDemo/static/js/3.d96aaa3f.chunk.js.map",
     "index.html": "/BeautyFaceDemo/index.html",
-    "static/css/main.0f08eb3b.chunk.css.map": "/BeautyFaceDemo/static/css/main.0f08eb3b.chunk.css.map",
-    "static/js/2.031b91f6.chunk.js.LICENSE.txt": "/BeautyFaceDemo/static/js/2.031b91f6.chunk.js.LICENSE.txt",
+    "static/css/main.8d34c6bf.chunk.css.map": "/BeautyFaceDemo/static/css/main.8d34c6bf.chunk.css.map",
+    "static/js/2.250ed8b4.chunk.js.LICENSE.txt": "/BeautyFaceDemo/static/js/2.250ed8b4.chunk.js.LICENSE.txt",
     "static/media/pngegg.699fb6d5.png": "/BeautyFaceDemo/static/media/pngegg.699fb6d5.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.cff454d8.js",
-    "static/js/2.031b91f6.chunk.js",
-    "static/css/main.0f08eb3b.chunk.css",
-    "static/js/main.0febb163.chunk.js"
+    "static/js/runtime-main.0a588cd1.js",
+    "static/js/2.250ed8b4.chunk.js",
+    "static/css/main.8d34c6bf.chunk.css",
+    "static/js/main.562310ce.chunk.js"
   ]
 }
