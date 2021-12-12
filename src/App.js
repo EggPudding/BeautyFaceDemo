@@ -193,7 +193,9 @@ function App() {
       {/* 4. Slider */}
       <div>
         {/* 4.1 Lib Color Slider */}
-        <h3>enhance lib color</h3>
+        <h3 style={{ display: isResultLoading ? 'inline-block' : 'none' }}>
+          enhance lib color
+        </h3>
         <Grid
           container
           spacing={1}
