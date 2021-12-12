@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/BeautyFaceDemo/static/css/main.8d34c6bf.chunk.css",
-    "main.js": "/BeautyFaceDemo/static/js/main.562310ce.chunk.js",
-    "main.js.map": "/BeautyFaceDemo/static/js/main.562310ce.chunk.js.map",
+    "main.js": "/BeautyFaceDemo/static/js/main.03880e89.chunk.js",
+    "main.js.map": "/BeautyFaceDemo/static/js/main.03880e89.chunk.js.map",
     "runtime-main.js": "/BeautyFaceDemo/static/js/runtime-main.0a588cd1.js",
     "runtime-main.js.map": "/BeautyFaceDemo/static/js/runtime-main.0a588cd1.js.map",
     "static/js/2.250ed8b4.chunk.js": "/BeautyFaceDemo/static/js/2.250ed8b4.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.0a588cd1.js",
     "static/js/2.250ed8b4.chunk.js",
     "static/css/main.8d34c6bf.chunk.css",
-    "static/js/main.562310ce.chunk.js"
+    "static/js/main.03880e89.chunk.js"
   ]
 }
