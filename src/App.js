@@ -113,7 +113,7 @@ function App() {
     >
       {/* 1. Header */}
       <header height="20vmin">
-        <h1>BeautyFace Demo v.1</h1>
+        <h1>BeautyFace Demo v.1.0.0</h1>
         <h2>Enhance photo with AI model</h2>
         <h3>
           Upload your own image and
