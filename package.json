@@ -2,6 +2,7 @@
   "name": "beautyface",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://EggPudding.github.io/BeautyFaceDemo",
   "dependencies": {
     "@emotion/react": "^11.7.0",
     "@emotion/styled": "^11.6.0",
@@ -22,6 +23,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -60,6 +63,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.3.2"
   }
 }
