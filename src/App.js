@@ -11,8 +11,11 @@ function App() {
   const [image, setImage] = useState();
   const [previewURL, setPreviewURL] = useState('');
   const [resultURL, setResultURL] = useState('');
+  const [segmentURL, setSegmentURL] = useState('');
   const [isPreviewLoading, setIsPreviewLoading] = useState(false);
   const [isResultLoading, setIsResultLoading] = useState(false);
+
+  const [libColor, setLibColor] = useState([0, 0, 0]);
 
   // Image change handler
   useEffect(() => {
@@ -56,10 +59,49 @@ function App() {
         .then((res) => res.json())
         .then((res) => {
           setResultURL(`data:image/png;base64,${res.data}`);
+          setSegmentURL(`data:image/png;base64,${res.segment}`);
           setIsResultLoading(true);
         });
     }
   }, [previewURL]);
+
+  // Lib color change callback
+  useEffect(() => {
+    if (isResultLoading) {
+      console.log(libColor);
+
+      const post = {
+        data: previewURL
+          .toString()
+          .replace(/^data:image\/(png|jpg|jpeg);base64,/, ''),
+        type: 'enhance',
+        segment: segmentURL
+          .toString()
+          .replace(/^data:image\/(png|jpg|jpeg);base64,/, ''),
+        lib: libColor,
+      };
+
+      console.log(post);
+
+      fetch(
+        // 'https://us-central1-absolute-hook-325400.cloudfunctions.net/inference',
+        // 'http://192.168.0.81:8080/',
+        'http://192.168.1.50:8080/',
+        {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify(post),
+        },
+      )
+        .then((res) => res.json())
+        .then((res) => {
+          setResultURL(`data:image/png;base64,${res.data}`);
+          setIsResultLoading(true);
+        });
+    }
+  }, [libColor]);
 
   return (
     <div
@@ -163,6 +205,10 @@ function App() {
               min={-30}
               max={30}
               color="error"
+              onChangeCommitted={(e, v) => {
+                // e.preventDefault();
+                setLibColor([v, libColor[1], libColor[2]]);
+              }}
             />
           </Grid>
           <Grid item xs={3} />
@@ -176,6 +222,10 @@ function App() {
               min={-30}
               max={30}
               color="success"
+              onChangeCommitted={(e, v) => {
+                // e.preventDefault();
+                setLibColor([libColor[0], v, libColor[2]]);
+              }}
             />
           </Grid>
           <Grid item xs={3} />
@@ -189,6 +239,10 @@ function App() {
               min={-30}
               max={30}
               color="primary"
+              onChangeCommitted={(e, v) => {
+                // e.preventDefault();
+                setLibColor([libColor[0], libColor[1], v]);
+              }}
             />
           </Grid>
           <Grid item xs={3} />
