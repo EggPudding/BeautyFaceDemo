@@ -47,9 +47,10 @@ function App() {
       };
 
       fetch(
-        'https://us-central1-absolute-hook-325400.cloudfunctions.net/inference',
+        // 'https://us-central1-absolute-hook-325400.cloudfunctions.net/inference',
         // 'http://192.168.0.81:8080/',
         // 'http://192.168.1.50:8080/',
+        'http://localhost:8080/',
         {
           method: 'POST',
           headers: {
@@ -86,9 +87,10 @@ function App() {
       console.log(post);
 
       fetch(
-        'https://us-central1-absolute-hook-325400.cloudfunctions.net/inference',
+        // 'https://us-central1-absolute-hook-325400.cloudfunctions.net/inference',
         // 'http://192.168.0.81:8080/',
         // 'http://192.168.1.50:8080/',
+        'http://localhost:8080/',
         {
           method: 'POST',
           headers: {
