@@ -7,13 +7,15 @@ import Box from '@mui/material/Box';
 import { getRadioUtilityClass } from '@mui/material';
 import placeHolder from './asset/pngegg.png';
 
+// TODO: Use landing page free template instead
+// TODO: Add other body part color changer
 function App() {
-  const [image, setImage] = useState();
-  const [previewURL, setPreviewURL] = useState('');
-  const [resultURL, setResultURL] = useState('');
-  const [segmentURL, setSegmentURL] = useState('');
-  const [isPreviewLoading, setIsPreviewLoading] = useState(false);
-  const [isResultLoading, setIsResultLoading] = useState(false);
+  const [image, setImage] = useState(); // image for reading from web
+  const [previewURL, setPreviewURL] = useState(''); // preview image (color unchanged)
+  const [resultURL, setResultURL] = useState(''); // result image (color changed)
+  const [segmentURL, setSegmentURL] = useState(''); // segmeng image
+  const [isPreviewLoading, setIsPreviewLoading] = useState(false); // whether preview image (org) loaded
+  const [isResultLoading, setIsResultLoading] = useState(false); // whether result image (enhanced) loaded
 
   const [libColor, setLibColor] = useState([0, 0, 0]);
 
