@@ -75,11 +75,11 @@ function App() {
         data: previewURL
           .toString()
           .replace(/^data:image\/(png|jpg|jpeg);base64,/, ''),
-        type: 'enhance',
+        type: 'enhance_lib',
         segment: segmentURL
           .toString()
           .replace(/^data:image\/(png|jpg|jpeg);base64,/, ''),
-        lib: libColor,
+        value: libColor,
       };
 
       console.log(post);
