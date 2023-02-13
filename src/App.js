@@ -32,6 +32,7 @@ function App() {
   }, [image]);
 
   // previewURL change handler
+  // TODO: Image size auto-scale for performance
   useEffect(() => {
     if (previewURL) {
       console.log(previewURL);
